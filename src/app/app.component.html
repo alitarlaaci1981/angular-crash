@@ -1,3 +1,162 @@
-<h1>First Angular App</h1>
+<!-- <h1>First Angular App</h1>
+<h2>{{title}}</h2> -->
+
+<!--
+<img [src]="imgUrl" alt="angular image">
+
+<button disabled="{{isDisabled}}">disable using string interpolation
+
+</button>
+<button [disabled]="isDisabled">disable using propert binding</button>
+-->
+
+
+ <!--style binding
+<button
+ [class.active]="isActive"
+ [class.no-active]="!isActive"
+ [class.active-border]="isActive"
+ [class.no-active-border]="!isActive"
+ >Click Me
+</button>
+
+ <button [class.apple]="fruitName == 'Apple'">Fruit Ninja</button>
+ -->
+
+<!--Style binding and class binging
+<button
+[style.backgroundColor]="isActive?'red': 'green'"
+[style.border]="isActive?'3px solid yellow' : ''"
+>Click</button>
+
+<button
+[class.active]="isActive">
+Class binding</button>
+-->
+
+<!--Event Binding
+<button (keyup)="buttonClick()">Click Me</button>
+<input type="text" (keyup)="keyEnter($event)">
+-->
+
+<!--
+<input type="text" (keyup.enter)="keyupFiltering(user)" #user id="userInput">
+-->
+
+<!--
+two way data binding
+<input type="text" [value]="userName" #username (keyup.enter)="updateUserName(username)">
+
+
+<input type="text" [(ngModel)]="userName">
+<h3>{{userName}}</h3>
+-->
+
+
+<!-- <h2 *ngIf="isLoggedIn; else message">{{userName}}</h2>
+<!-- <h2>{{userName}}</h2> -->
+ <!-- <h4 *ngIf="!isLoggedIn">user not logged in</h4>
+
+
+ <ng-template #message>
+  <h4>User is not logged in (loaded using ng template)</h4>
+ </ng-template> -->
+
+
+
+
+<!-- @if(isLoggedIn){
+<h2>{{userName}}</h2>
+}@else{
+<h4 *ngIf="!isLoggedIn">user not logged in(loaded from else block)</h4>
+}
+
+@if(!isLoggedIn){
+<h4 *ngIf="!isLoggedIn">user not logged in(loaded using if syntax bloc)</h4>
+} -->
+
+<!--Multiple conditions-->
+
+<!-- <h4 *ngIf="isAdmin">Welcome Admin</h4>
+<h4 *ngIf="isMember">Welcome Member</h4>
+<h4 *ngIf="isGuest">Welcome Guest</h4> -->
+
+<!-- @if(isAdmin){
+  <h4>Welcome Admin</h4>
+}
+@else if(isMember){
+  <h4>Welcome Member</h4>
+}@else if(isGuest){
+  <h4>Welcome Guest</h4>
+} -->
+
+
+<!-- if directives with number Values
+
+<button (click)="countLoginAttempts()" *ngIf="loginCount < 3" >Log In</button>
+<h4 *ngIf="loginCount > 3">Exceeded 3 login attempts, try agai later</h4>
+
+@if(loginCount < 3){
+  <button (click)="countLoginAttempts()">Login Syntax</button>
+}
+
+@if(loginCount > 3){
+  <h4>Exceeded 3 login attempts, try again later</h4>
+}
+ -->
+
+
+ <!-- if direcives with string values
+
+<h4 *ngIf="userRole=='Admin'; else memberMessage">Welcome Admin</h4>
+<ng-template #memberMessage>
+  <h4>Welcome Member</h4>
+</ng-template>
+
+ -->
+
+<ng-template #callToAction>
+ <button>Join Now</button>
+ <p>Call To Action</p>
+</ng-template>
+
+<div [ngTemplateOutlet]="callToAction">
+  <h5>Side Bar</h5>
+</div>
+<div [ngTemplateOutlet]="callToAction">
+  <h5>Hero</h5>
+</div>
+<div [ngTemplateOutlet]="callToAction">
+  <h5>Footer</h5>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <app-navbar></app-navbar>
+<app-header></app-header>
+-->
 
